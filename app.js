@@ -41,4 +41,8 @@ app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(__dirname + "/index.html"); // Serve your HTML file
+});
+
 module.exports = app;
